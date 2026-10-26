@@ -416,8 +416,9 @@ li::marker {
 }
 
 /* 排版 polish：页顶品牌色条、姓名加大、证件照细边框 */
-.resume-page {
+.profile-header {
   border-top: 6px solid var(--blue);
+  padding-top: 14px;
 }
 
 .profile-header h1 {
