@@ -368,17 +368,45 @@ li::marker {
   }
 }
 
-/* 陆林然简历：公司颜色条（装饰色，待 logo 到达后按 logo 主色校准） */
+/* 陆林然简历：页眉证件照 */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.id-photo {
+  width: 102px;
+  height: 136px;
+  object-fit: cover;
+  object-position: top center;
+  flex-shrink: 0;
+}
+
+/* 陆林然简历：公司颜色条（按 logo 主色取色） */
 .role-card-ldrobot .role-heading {
-  background: linear-gradient(90deg, #edf3ff 0%, #f2fcfd 100%);
-  border-left: 5px solid #3c8cff;
+  background: linear-gradient(90deg, #e8f4fc 0%, #f0f9ff 100%);
+  border-left: 5px solid #0080c0;
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+}
+
+.role-card-ldrobot .logo-chip {
+  width: 150px;
+}
+
+.role-card-ldrobot .logo-chip img {
+  width: auto;
+  max-width: 140px;
+  height: 32px;
 }
 
 .role-card-shenjin .role-heading {
-  background: #fff1eb;
-  border-left: 5px solid #ff6a00;
-}
-
-.role-card-shenjin .brand-mark {
-  background: #ff6a00;
+  background: #efeffb;
+  border-left: 5px solid #5a5ad6;
 }
