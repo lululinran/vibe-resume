@@ -39,11 +39,12 @@
             <div class="project-block">
               <h3>多模态家庭 AI Agent 系统（主机侧编排 + 设备端感知）</h3>
               <ul>
-                <li><strong>项目简介：</strong>本地 AI 主机（Python / FastAPI）负责编排、记忆与语音交互，机器人端（RK3576 / C++）负责视觉感知与云台控制，经 MCP / ZeroMQ 打通并接入 Home Assistant、Frigate；隐私为硬约束，敏感数据不出户。我负责主机侧编排与记忆链路，主导设备端感知与 MCP 化。</li>
-                <li><strong>编排内核：</strong>高频指令走快路、零模型调用，复杂的才交给大模型。设计「确定性优先、LLM 兜底」的五层处理漏斗（定域 → 隐私闸 → 关键词路由 → LLM 分流 → 最多 8 步工具循环）；寒暄、口令等高频快路零模型调用。语音交互与长任务分别设 3s / 15s 双预算，超时转后台继续而非报错，交互时限与任务时限解耦。</li>
-                <li><strong>上下文与记忆工程：</strong>记忆、检索结果只当资料、不当指令，防提示注入。记忆、RAG、工具结果一律以「数据而非指令」身份注入，并附加人格不变量约束，防范提示注入；50+ 工具候选经 bge-m3 语义检索收敛至 ≤9 个；记忆按类型设差异化半衰期（身份类永不衰减、设备操作类 7 天遗忘）；LLM 抽取结果以 0.45 低信任分入库而非直接采信；RAG 采用混合检索 + RRF 融合，低置信时固定拒答。</li>
-                <li><strong>MCP 工具运行时：</strong>所有工具默认不信任，先审计、后放行。以「默认不信任」为原则，将 Home Assistant、Frigate 及自研设备全部工具化（聚合 11+ server schema），技能以 SKILL.md 声明式热加载；审计先行、默认拒绝（fail-closed），隐私双闸 + 出网脱敏，防 SSRF，危险操作二次确认。</li>
-                <li><strong>设备端工具化：</strong>把云台跟踪做成有回执的可靠调用，断连自动停。设备端（C++）实现 MCP-over-WebSocket 服务端，在不可靠的 pub-sub 总线之上，把云台跟踪封装为「请求 → 回执 + 3s 超时」的可靠工具契约，断连自动停止跟踪；手写 Kalman 滤波，采用栈上定长矩阵、高频路径零堆分配。</li>
+                <li><strong>背景与目标：</strong>本地 AI 主机（Python / FastAPI）负责编排、记忆与语音交互，机器人端（RK3576 / C++）负责视觉感知与云台控制，经 MCP / ZeroMQ 打通并接入 Home Assistant、Frigate。约束有三：语音交互有时限要求、长任务不能因超时而失败、敏感数据不出户。</li>
+                <li><strong>我的职责：</strong>负责主机侧编排与记忆链路，主导设备端感知与 MCP 化。</li>
+                <li><strong>高频指令零模型调用，复杂任务才走 LLM：</strong>「确定性优先、LLM 兜底」的五层处理漏斗（定域 → 隐私闸 → 关键词路由 → LLM 分流 → 最多 8 步工具循环）；寒暄、口令等高频快路零模型调用。语音交互 <strong>3s</strong> / 长任务 <strong>15s</strong> 双预算，超时转后台继续而非报错，交互时限与任务时限解耦。</li>
+                <li><strong>防提示注入：记忆、检索结果只当资料、不当指令。</strong>记忆、RAG、工具结果一律以「数据而非指令」身份注入，并附加人格不变量约束；<strong>50+</strong> 工具候选经 bge-m3 语义检索收敛至 <strong>≤9 个</strong>；记忆按类型设差异化半衰期（身份类永不衰减、设备操作类 7 天遗忘）；LLM 抽取结果以 <strong>0.45</strong> 低信任分入库而非直接采信；RAG 采用混合检索 + RRF 融合，低置信时固定拒答。</li>
+                <li><strong>默认不信任、审计先行、默认拒绝（fail-closed）：</strong>Home Assistant、Frigate 及自研设备全部工具化（聚合 <strong>11+ server schema</strong>），技能以 SKILL.md 声明式热加载；隐私双闸 + 出网脱敏，防 SSRF，危险操作二次确认。</li>
+                <li><strong>在不可靠总线上做出可靠调用：</strong>设备端（C++）实现 MCP-over-WebSocket 服务端，把云台跟踪封装为「请求 → 回执 + <strong>3s 超时</strong>」的可靠工具契约，断连自动停止跟踪；手写 Kalman 滤波，栈上定长矩阵、高频路径零堆分配。</li>
               </ul>
             </div>
           </article>
