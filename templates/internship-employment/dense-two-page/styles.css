@@ -438,3 +438,13 @@ li::marker {
 .resume-page {
   padding-bottom: 30px;
 }
+
+/* 最终美化：行距放开、段标题留白加大（仍 1 页内） */
+body {
+  line-height: 1.32;
+}
+
+.resume-section h2 {
+  margin: 16px 0 8px;
+  padding-bottom: 5px;
+}
