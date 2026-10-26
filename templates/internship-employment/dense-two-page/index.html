@@ -18,7 +18,6 @@
           <div class="profile-text">
           <h1>陆林然</h1>
           <p class="contact-row">13671473060　|　20238131017@m.scnu.edu.cn　|　github.com/lululinran</p>
-          <p class="headline">求职意向：Agent 应用开发 ｜ 到岗时间：立即到岗</p>
           <p class="identity-row">华南师范大学 ｜ 数据科学与大数据技术专业（本科）｜ 2023.09 – 2027.06</p>
           <p class="education-row">综合测评专业前 8% ｜ CET-6 ｜ 中国国际大学生创新大赛省级银奖、校级课外科研「金种子」立项结题、十五运会志愿服务卓越奖（119 小时+）｜ 行知书院学生体育协会会长</p>
           <p class="course-row">专业课程：数据挖掘与机器学习（89）· 数据结构（88）· Python程序设计及应用（86）· 数据科学导论（93）· 大数据分析技术（92）· 并行与分布式计算（95）· 统计学原理（99）· 数学建模（97）· Linux操作系统与应用（92）· Web开发基础（90）</p>
@@ -59,9 +58,10 @@
             <div class="project-block">
               <h3>Agent 驱动的全栈交付工作流（五站流水线设计与搭建）</h3>
               <ul>
-                <li><strong>背景：</strong>to B 小程序定制业务初期依赖手工 vibe-coding 与碎片化 prompt，质量与复用都不稳定。我把分散的 prompt 实践重构成可复用的 Agent 全栈交付工作流，并用真实商单跑通闭环。</li>
-                <li><strong>方法升级：</strong>对照 Spec-Driven Development（spec-kit）与多智能体 SOP（MetaGPT），把 prompt 实践重组为「结构化 Spec → Schema → 模块装配 → 扩展点定制 → 过站验收」五站工作流；以配置驱动生成（app.config.json → SQL / 数据模型 / 类型定义），支撑多场景适配。</li>
-                <li><strong>交付验证：</strong>用该工作流交付「代客祭扫服务平台」（uni-app x + Egg.js + MySQL），产出合同级 PRD、19 张表（3NF）数据库建模、RESTful API 与 Admin 后台，npm test 32 项全部通过；订单快照不变式、订单状态机（pending_payment → … → completed / refund）与双端权限约束均由工作流生成，支付与权限路径强制人工审核。</li>
+                <li><strong>背景：</strong>to B 小程序定制业务初期依赖手工 vibe-coding 与碎片化 prompt，质量与复用不稳定。</li>
+                <li><strong>我的职责：</strong>设计并搭建可复用的 Agent 全栈交付工作流，并用真实商单验证闭环。</li>
+                <li><strong>从碎片化 prompt 到可复用工作流：</strong>对照 Spec-Driven Development（spec-kit）与多智能体 SOP（MetaGPT），把 prompt 实践重组为「结构化 Spec → Schema → 模块装配 → 扩展点定制 → 过站验收」五站工作流；配置驱动生成（app.config.json → SQL / 数据模型 / 类型定义），支撑多场景适配。</li>
+                <li><strong>真实商单跑通闭环：</strong>用该工作流交付「代客祭扫服务平台」（uni-app x + Egg.js + MySQL），产出合同级 PRD、<strong>19 张表（3NF）</strong>数据库建模、RESTful API 与 Admin 后台，<strong>npm test 32 项全部通过</strong>；订单快照不变式、订单状态机（pending_payment → … → completed / refund）与双端权限约束均由工作流生成，支付与权限路径强制人工审核。</li>
               </ul>
             </div>
 
@@ -92,10 +92,11 @@
         <section class="resume-section compact-section">
           <h2>专业技能</h2>
           <ul class="closing-list">
-            <li><strong>Agent / LLM 应用：</strong>熟悉 LLM Agent 应用开发，掌握 tool calling、MCP 协议、Prompt 与上下文工程、记忆系统、RAG 检索增强。</li>
-            <li><strong>全栈与数据库：</strong>熟悉 uni-app x、Egg.js，掌握数据库建模、RESTful API 与权限体系设计；熟悉 Git 协作与单元测试规范。</li>
-            <li><strong>编程与后端：</strong>熟悉 Python、SQL，具备 FastAPI、asyncio、MySQL、PostgreSQL、Qdrant 服务端开发经验。</li>
-            <li><strong>算法与端侧：</strong>了解计算机视觉基础，具备 OpenCV、目标跟踪、端侧 NPU 部署（RKNN）实践。</li>
+            <li><strong>Agent Loop 与任务编排：</strong>熟悉感知–推理–工具调用–观测的 Agent 循环设计，掌握确定性优先、LLM 兜底的混合编排与多步工具循环（最多 8 步）、超时熔断与后台续跑。</li>
+            <li><strong>上下文工程与记忆系统：</strong>掌握记忆与检索的上下文工程（50+ 工具候选语义收敛至 ≤9 个、记忆差异化半衰期、低信任分入库）、RAG（混合检索 + RRF 融合）与防提示注入（数据而非指令）。</li>
+            <li><strong>MCP 工具生态：</strong>熟悉 MCP 协议与工具运行时（默认不信任、审计先行、fail-closed）、SKILL.md 声明式技能热加载、MCP-over-WebSocket 设备端工具化。</li>
+            <li><strong>视觉算法：</strong>研究过 YOLO 目标检测、自动对焦、人脸追踪，具备 OpenCV、目标跟踪、端侧 NPU 部署（RKNN）实践。</li>
+            <li><strong>全栈与后端：</strong>熟悉 FastAPI、asyncio、MySQL、PostgreSQL、Qdrant 服务端开发；熟悉 uni-app x、Egg.js，掌握数据库建模、RESTful API 与权限体系设计；熟悉 Git 协作与单元测试规范。</li>
           </ul>
         </section>
       </article>

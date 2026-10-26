@@ -414,3 +414,17 @@ li::marker {
 .course-row {
   font-size: 14px;
 }
+
+/* 排版 polish：页顶品牌色条、姓名加大、证件照细边框 */
+.resume-page {
+  border-top: 6px solid var(--blue);
+}
+
+.profile-header h1 {
+  font-size: 34px;
+}
+
+.id-photo {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
