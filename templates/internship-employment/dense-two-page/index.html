@@ -74,8 +74,8 @@
           <article class="project-block standalone-project">
             <h3>MemeFuzzer ｜ ICME 2026（CCF-B）已接收 · 第三作者</h3>
             <ul>
-              <li><strong>研究内容：</strong>受软件 fuzz testing 启发，以受害者视角（mindset 模拟 + Mindset Router）校准多模态大模型对有害梗图的注意力偏差，再经 Norm Alignment Network 对齐人类判断。</li>
-              <li><strong>我的工作：</strong>参与前期调研与方法框架设计，搭建三数据集统一评测流水线（FHM / MAMI / ToxiCN-MM），跑通 10 余个 baseline 对比与三组消融实验。</li>
+              <li><strong>研究内容：</strong>多模态大模型安全评测：受软件 fuzz testing 启发，以受害者视角（mindset 模拟 + Mindset Router）校准多模态大模型对有害梗图的注意力偏差，再经 Norm Alignment Network 对齐人类判断。</li>
+              <li><strong>我的工作：</strong>参与前期调研与方法框架设计，搭建三数据集统一评测流水线（FHM / MAMI / ToxiCN-MM），覆盖数据准备、基线对比、消融验证全流程，跑通 10 余个 baseline 对比与三组消融实验。</li>
               <li><strong>结果：</strong>中英三数据集全面超越强基线，中文集 F1 相对提升 +5.48。</li>
             </ul>
           </article>
@@ -84,7 +84,7 @@
             <h3>PoisonSwarm（FCGen）｜ ACL 2026（CCF-A）在投 · 第三作者　<a href="https://github.com/lululinran/poisonswarm_defeat">github.com/lululinran/poisonswarm_defeat</a></h3>
             <ul>
               <li><strong>研究内容：</strong>LLM 安全红队研究：揭示众包式分布式有害信息生成，三阶段流水线（反事实映射 → 单元级毒化 → 有害重组）+ Launder Scheduler 跨模型调度，攻击成功率 SSR 达 1.00。</li>
-              <li><strong>我的工作：</strong>参与三阶段流水线实验搭建与前期调研；独立实现攻击特征检测原型（语义解析 → 贝叶斯意图建模 → 分档熔断 → 多模型共识），做会话级意图追踪。</li>
+              <li><strong>我的工作：</strong>参与三阶段流水线实验搭建与前期调研；独立实现攻击特征检测原型（语义解析 → 贝叶斯意图建模 → 分档熔断 → 多模型共识），做会话级意图追踪，覆盖红队攻击分析与防御检测双视角。</li>
             </ul>
           </article>
         </section>
@@ -93,8 +93,11 @@
           <h2>专业技能</h2>
           <ul class="closing-list">
             <li><strong>Agent Loop 与任务编排：</strong>熟悉感知–推理–工具调用–观测的 Agent 循环设计，掌握确定性优先、LLM 兜底的混合编排与多步工具循环（最多 8 步）、超时熔断与后台续跑。</li>
-            <li><strong>上下文工程与记忆系统：</strong>掌握记忆与检索的上下文工程（50+ 工具候选语义收敛至 ≤9 个、记忆差异化半衰期、低信任分入库）、RAG（混合检索 + RRF 融合）与防提示注入（数据而非指令）。</li>
+            <li><strong>上下文工程与记忆系统：</strong>掌握记忆与检索的上下文工程（50+ 工具候选语义收敛至 ≤9 个、记忆差异化半衰期、低信任分入库）、RAG（混合检索 + RRF 融合、低置信固定拒答）。</li>
             <li><strong>MCP 工具生态：</strong>熟悉 MCP 协议与工具运行时（默认不信任、审计先行、fail-closed）、SKILL.md 声明式技能热加载、MCP-over-WebSocket 设备端工具化。</li>
+            <li><strong>AI 安全与对抗防御：</strong>熟悉提示注入防御（数据而非指令、隐私双闸、出网脱敏、防 SSRF、危险操作二次确认）；实现过攻击特征检测原型（语义解析 → 贝叶斯意图建模 → 分档熔断 → 多模型共识），做会话级意图追踪。</li>
+            <li><strong>多模态评测与实验方法：</strong>搭建过三数据集统一评测流水线，跑通 10 余个 baseline 对比与三组消融实验；熟悉多模态大模型安全评测方法。</li>
+            <li><strong>多智能体与 Spec-Driven：</strong>了解 MetaGPT 多智能体 SOP 与 spec-kit 的 Spec-Driven 方法，并用于全栈交付工作流设计。</li>
             <li><strong>视觉算法：</strong>研究过 YOLO 目标检测、自动对焦、人脸追踪，具备 OpenCV、目标跟踪、端侧 NPU 部署（RKNN）实践。</li>
             <li><strong>全栈与后端：</strong>熟悉 FastAPI、asyncio、MySQL、PostgreSQL、Qdrant 服务端开发；熟悉 uni-app x、Egg.js，掌握数据库建模、RESTful API 与权限体系设计；熟悉 Git 协作与单元测试规范。</li>
           </ul>
