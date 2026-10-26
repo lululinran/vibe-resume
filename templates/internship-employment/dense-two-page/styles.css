@@ -410,3 +410,7 @@ li::marker {
   background: #efeffb;
   border-left: 5px solid #5a5ad6;
 }
+
+.course-row {
+  font-size: 14px;
+}

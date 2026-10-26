@@ -18,9 +18,10 @@
           <div class="profile-text">
           <h1>陆林然</h1>
           <p class="contact-row">13671473060　|　20238131017@m.scnu.edu.cn　|　github.com/lululinran</p>
-          <p class="headline">求职意向：Agent 应用开发 ｜ 期望城市：北京 / 上海 / 广州 / 深圳 / 杭州 ｜ 到岗时间：随时到岗</p>
-          <p class="identity-row">华南师范大学（汕尾校区）｜ 数据科学与大数据技术（本科）｜ 2023.09 – 2027.06</p>
+          <p class="headline">求职意向：Agent 应用开发 ｜ 到岗时间：立即到岗</p>
+          <p class="identity-row">华南师范大学 ｜ 数据科学与大数据技术专业（本科）｜ 2023.09 – 2027.06</p>
           <p class="education-row">综合测评专业前 8% ｜ CET-6 ｜ 中国国际大学生创新大赛省级银奖、校级课外科研「金种子」立项结题、十五运会志愿服务卓越奖（119 小时+）｜ 行知书院学生体育协会会长</p>
+          <p class="course-row">专业课程：数据挖掘与机器学习（89）· 数据结构（88）· Python程序设计及应用（86）· 数据科学导论（93）· 大数据分析技术（92）· 并行与分布式计算（95）· 统计学原理（99）· 数学建模（97）· Linux操作系统与应用（92）· Web开发基础（90）</p>
           </div>
           <img class="id-photo" src="../../../assets/id-photo.jpg" alt="证件照" />
         </header>
@@ -63,15 +64,6 @@
               </ul>
             </div>
 
-            <div class="project-block">
-              <h3>AI 生成代码的自动质检与修复流水线　<a href="https://github.com/lululinran/metagpt-executor">github.com/lululinran/metagpt-executor</a></h3>
-              <ul>
-                <li><strong>项目简介：</strong>开源 AI 编程框架可以根据一句话需求自动生成完整项目代码，但生成结果常藏有“测试全过、实际跑不起来”的隐蔽缺陷。我负责在代码生成之后加一道“自动质检 + 自动返修”工序，让有问题的代码能被自动发现、自动修好、再自动验证，形成闭环。</li>
-                <li><strong>自动质检：</strong>代码生成后自动装入隔离沙箱，跑完所有自动化测试，并把程序入口真实启动一遍、验证能跑起来；报错信息会被整理成修 bug 任务单，发回大模型自动修复，修完自动复验，直到通过或达到轮次上限。</li>
-                <li><strong>真实缺陷验证：</strong>曾抓到“105 个测试全绿、但程序入口文件是空的、根本启动不了”的 bug，自动修复后 105 项测试通过、入口正常启动；还补上了测试框架在收集阶段报错被漏判的兜底逻辑。</li>
-                <li><strong>成本账本：</strong>记录每一轮修复的大模型开销——修一个 bug 平均约 2–3 万 tokens（大模型的计费单位）、只调用 1 次大模型，单纯复验不花钱，让“修几轮最划算”有数据可依。</li>
-              </ul>
-            </div>
           </article>
         </section>
 
