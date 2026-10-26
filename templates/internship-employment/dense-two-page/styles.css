@@ -429,3 +429,12 @@ li::marker {
   border: 1px solid #e5e7eb;
   border-radius: 4px;
 }
+
+/* 紧凑微调：技能 8 条后仍需 1 页（省约 28px，不动内容） */
+.closing-list li {
+  margin: 4px 0;
+}
+
+.resume-page {
+  padding-bottom: 30px;
+}
