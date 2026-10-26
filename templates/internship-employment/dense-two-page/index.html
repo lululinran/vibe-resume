@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>沈知遥 - 多模态算法工程师简历（双页模板）</title>
+    <title>陆林然 - Agent 应用开发简历</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -12,85 +12,59 @@
       <a href="../../README.md">模板说明</a>
     </div>
 
-    <main class="resume-book" aria-label="高密度双页技术简历模板">
+    <main class="resume-book" aria-label="陆林然的简历">
       <article class="resume-page">
         <header class="profile-header">
-          <h1>沈知遥</h1>
-          <p class="contact-row">138 0000 0000　|　shenzhiyao@example.com　|　微信：vibe_resume_demo</p>
-          <p class="headline">22 years old · Multimodal Algorithm Engineer · 2027 届应届生</p>
-          <p class="identity-row">github.com/example　（开源多模态工具 Maintainer｜技术博客作者）</p>
-          <p class="education-row">东海科技大学　人工智能实验班｜2023.09 - 2027.06　GPA 3.72/4.0｜专业排名 6/120</p>
+          <h1>陆林然</h1>
+          <p class="contact-row">13671473060　|　20238131017@m.scnu.edu.cn　|　github.com/lululinran</p>
+          <p class="headline">求职意向：Agent 应用开发 ｜ 期望城市：北京 / 上海 / 广州 / 深圳 / 杭州 ｜ 到岗时间：随时到岗</p>
+          <p class="identity-row">华南师范大学（汕尾校区）｜ 数据科学与大数据技术（本科）｜ 2023.09 – 2027.06</p>
+          <p class="education-row">综合测评专业前 8% ｜ CET-6 ｜ 中国国际大学生创新大赛省级银奖、校级课外科研「金种子」立项结题、十五运会志愿服务卓越奖（119 小时+）｜ 行知书院学生体育协会会长</p>
         </header>
 
         <section class="resume-section">
           <h2>实习经历</h2>
-          <p class="section-lead">聚焦多模态理解、Agent 工程和训练数据基础设施，累计沉淀 20+ 篇内部技术文档；以下内容均为模板演示用模拟经历与指标。</p>
 
-          <article class="feature-project">
-            <h3><a href="https://github.com/example/vision-agent">github.com/example/vision-agent</a><span>★ 2.4k stars · 310 forks</span></h3>
-            <ul>
-              <li><strong>项目简介：</strong>面向长视频与图文知识库的开源 Multimodal Agent，支持视觉检索、视频理解、结构化报告生成、可插拔 Skill 与沙箱工具执行。</li>
-              <li><strong>我的职责：</strong>作为核心维护者，负责从固定 Pipeline 向 Agent Harness 的架构升级，并建设长上下文与多模态工具链。</li>
-              <li><strong>Agent Harness：</strong>由 Lead Agent 统一意图识别与任务规划，通过 task 工具按需派生 Researcher / Vision Coder；调度与执行线程池分离，支持 4 路并发、超时熔断与流式结果回传。</li>
-              <li><strong>Middleware Chain：</strong>将上传解析、媒体采样、工具修复、上下文压缩、长期记忆与人工澄清抽象为 9 层中间件；新增能力只扩展对应层，主推理循环保持稳定。</li>
-              <li><strong>Context Engineering：</strong>长视频中间结果落盘并建立索引；按 token 预算动态选择历史证据；超限时先裁剪旧工具结果，再调用轻量模型生成结构化摘要；子 Agent 仅接收任务切片，完成后摘要回传。</li>
-              <li><strong>Skill System：</strong>每个 Skill 由独立目录和说明文件组成，system prompt 只注入能力索引，Agent 在执行到具体任务时再渐进加载全文，避免多模态工具说明一次性占满上下文。</li>
-              <li><strong>可观测性：</strong>统一记录 planning、tool call、视觉采样、模型 usage 与错误恢复事件；提供 trace replay 页面复现单步输入输出，并支持按会话比较不同模型和提示词版本。</li>
-            </ul>
+          <article class="role-card">
+            <div class="role-heading">
+              <strong>深圳乐动机器人股份有限公司（LDROBOT）· 具身智能与 AI 应用中心</strong>
+              <span>Agent 应用开发实习生｜2026.06 – 2026.09</span>
+            </div>
+
+            <div class="project-block">
+              <h3>多模态家庭 AI Agent 系统（主机侧编排 + 设备端感知）</h3>
+              <ul>
+                <li><strong>项目简介：</strong>本地 AI 主机（Python / FastAPI）负责编排、记忆与语音交互，机器人端（RK3576 / C++）负责视觉感知与云台控制，经 MCP / ZeroMQ 打通并接入 Home Assistant、Frigate；隐私为硬约束，敏感数据不出户。我负责主机侧编排与记忆链路，主导设备端感知与 MCP 化。</li>
+                <li><strong>编排内核：</strong>高频指令走快路、零模型调用，复杂的才交给大模型。设计「确定性优先、LLM 兜底」的五层处理漏斗（定域 → 隐私闸 → 关键词路由 → LLM 分流 → 最多 8 步工具循环）；寒暄、口令等高频快路零模型调用。语音交互与长任务分别设 3s / 15s 双预算，超时转后台继续而非报错，交互时限与任务时限解耦。</li>
+                <li><strong>上下文与记忆工程：</strong>记忆、检索结果只当资料、不当指令，防提示注入。记忆、RAG、工具结果一律以「数据而非指令」身份注入，并附加人格不变量约束，防范提示注入；50+ 工具候选经 bge-m3 语义检索收敛至 ≤9 个；记忆按类型设差异化半衰期（身份类永不衰减、设备操作类 7 天遗忘）；LLM 抽取结果以 0.45 低信任分入库而非直接采信；RAG 采用混合检索 + RRF 融合，低置信时固定拒答。</li>
+                <li><strong>MCP 工具运行时：</strong>所有工具默认不信任，先审计、后放行。以「默认不信任」为原则，将 Home Assistant、Frigate 及自研设备全部工具化（聚合 11+ server schema），技能以 SKILL.md 声明式热加载；审计先行、默认拒绝（fail-closed），隐私双闸 + 出网脱敏，防 SSRF，危险操作二次确认。</li>
+                <li><strong>设备端工具化：</strong>把云台跟踪做成有回执的可靠调用，断连自动停。设备端（C++）实现 MCP-over-WebSocket 服务端，在不可靠的 pub-sub 总线之上，把云台跟踪封装为「请求 → 回执 + 3s 超时」的可靠工具契约，断连自动停止跟踪；手写 Kalman 滤波，采用栈上定长矩阵、高频路径零堆分配。</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="role-card role-card-bytedance">
+          <article class="role-card">
             <div class="role-heading">
-              <span class="logo-chip"><img src="../../../assets/logos/bytedance-iconfont.svg" alt="字节跳动 Logo" /></span>
-              <strong>字节跳动（Mock 模拟经历）· 视觉智能平台</strong>
-              <span>多模态算法实习生｜2026.01 - 2026.06</span>
+              <strong>深圳市深津云科技有限公司</strong>
+              <span>Agent 全栈交付实习生｜2025.12 – 2026.03</span>
             </div>
 
             <div class="project-block">
-              <h3>Video-R1 数据与训练流水线｜Video QA + Grounding Trajectory Synthesis</h3>
+              <h3>Agent 驱动的全栈交付工作流（五站流水线设计与搭建）</h3>
               <ul>
-                <li><strong>背景与目标：</strong>真实视频任务存在时序跨度长、关键帧稀疏和答案证据不可追溯问题；目标是规模化构造带时序证据与推理过程的高质量训练轨迹。</li>
-                <li><strong>多模型统一适配：</strong>抽象 Model / Sampler / Verifier 接口，接入 8+ 视觉语言模型；按任务类型动态组合均匀采样、镜头切分和运动感知采样策略。</li>
-                <li><strong>轨迹合成引擎：</strong>同一容器内串联 Planner → Frame Selector → VLM → Verifier，失败时携带证据缺口与验证报告重试；通过 checkpoint 持久化采样帧、对话和中间预测，支持断点续跑。</li>
-                <li><strong>多 Scaffold 轨迹：</strong>统一接入 ReAct、Plan-and-Execute 与 Toolformer 风格执行器，按任务难度随机组合策略；维护历史轨迹 Archive，从关键中间步骤分叉并恢复现场，避免失败样本全量重跑。</li>
-                <li><strong>上下文压缩：</strong>超过预算时先替换旧帧分析和冗长工具输出，再保留任务、失败报告与关键证据生成结构化 handoff；切换模型时只传递可执行计划与现场索引。</li>
-                <li><strong>效果：</strong>模拟 Benchmark 中长视频问答准确率提升 18.7%，平均视觉 token 降低 34%，10 万级样本合成任务失败重跑成本降低 41%。</li>
+                <li><strong>背景：</strong>to B 小程序定制业务初期依赖手工 vibe-coding 与碎片化 prompt，质量与复用都不稳定。我把分散的 prompt 实践重构成可复用的 Agent 全栈交付工作流，并用真实商单跑通闭环。</li>
+                <li><strong>方法升级：</strong>对照 Spec-Driven Development（spec-kit）与多智能体 SOP（MetaGPT），把 prompt 实践重组为「结构化 Spec → Schema → 模块装配 → 扩展点定制 → 过站验收」五站工作流；以配置驱动生成（app.config.json → SQL / 数据模型 / 类型定义），支撑多场景适配。</li>
+                <li><strong>交付验证：</strong>用该工作流交付「代客祭扫服务平台」（uni-app x + Egg.js + MySQL），产出合同级 PRD、19 张表（3NF）数据库建模、RESTful API 与 Admin 后台，npm test 32 项全部通过；订单快照不变式、订单状态机（pending_payment → … → completed / refund）与双端权限约束均由工作流生成，支付与权限路径强制人工审核。</li>
               </ul>
             </div>
 
             <div class="project-block">
-              <h3>Multimodal Trace Evaluator｜Rubric Eval + Data Wash</h3>
+              <h3>AI 生成代码的自动质检与修复流水线　<a href="https://github.com/lululinran/metagpt-executor">github.com/lululinran/metagpt-executor</a></h3>
               <ul>
-                <li><strong>LLM-as-Judge：</strong>按事实性、时序定位、视觉证据充分性和工具效率拆分 Rubric；规则项零模型判断，语义项批量请求并支持多模型投票、限流与失败回退。</li>
-                <li><strong>Failure Onset 定位：</strong>逐步骤评估轨迹，自动识别首次错误帧选择或错误推理节点，过滤后续级联失败，只保留 onset 前的高质量决策片段用于 SFT / RL。</li>
-                <li><strong>轨迹压缩：</strong>按文本、图像描述、工具结果和错误栈差异化截断；超限时生成保留首条任务、视觉证据与失败报告的总结，保证 Judge 输入稳定。</li>
-                <li><strong>数据清洗：</strong>按 Pass Rate、Evidence Coverage、Effective Action Ratio 多维筛选并导出训练集；增量补全未完成评测，避免重复调用。</li>
-                <li><strong>效果：</strong>模拟数据中 Rubric 对高低质量轨迹区分度达到 31%，经 onset 清洗后训练样本人工验收通过率提升 16 个百分点。</li>
-              </ul>
-            </div>
-
-            <div class="project-block">
-              <h3>MMBench 评测服务化｜接入云端 GPU 容器平台</h3>
-              <ul>
-                <li><strong>服务链路：</strong>spec 配置 → 申请隔离容器 → 挂载数据集与模型 → 执行推理 → 异步轮询 → 汇总结构化指标；支持业务方按模型、数据版本和采样策略发起评测。</li>
-                <li><strong>可靠性：</strong>任务状态持久化到数据库，容器异常时自动重建并从样本级 checkpoint 续跑；结果按内容哈希去重，避免重复消耗 GPU。</li>
-                <li><strong>模拟规模：</strong>日均执行 2,000+ GPU 样本任务，失败自动恢复率 96%，评测环境准备时间从 30 分钟降低至 4 分钟。</li>
-              </ul>
-            </div>
-
-            <div class="project-block">
-              <h3>Training Data Lake｜版本化样本、轨迹与多模态特征</h3>
-              <ul>
-                <li><strong>数据模型：</strong>以 dataset / sample / artifact / trajectory 四层对象管理原始媒体、采样帧、模型输出与评测报告；每次洗数保存 lineage 和可复现配置。</li>
-                <li><strong>成本优化：</strong>视频、帧特征与文本轨迹分层存储，以内容哈希去重并按访问频率进行冷热迁移；模拟环境中存储量降低 38%，训练数据准备时间降低 52%。</li>
-              </ul>
-            </div>
-
-            <div class="project-block">
-              <h3>Session &amp; Memory Runtime｜跨会话恢复 + 多层压缩</h3>
-              <ul>
-                <li><strong>Session 管理：</strong>将对话、工具事件、中间文件和 token usage 写入同一会话快照；意外中断后按最后已验证步骤恢复，并对工具调用执行幂等检查。</li>
-                <li><strong>多层压缩：</strong>分为 Observation 裁剪、Tool Trace 结构化摘要、Episode Memory 合并与 Long-term Profile 固化四层；每层设独立 token 预算和保留规则，避免关键证据被覆盖。</li>
+                <li><strong>项目简介：</strong>开源 AI 编程框架可以根据一句话需求自动生成完整项目代码，但生成结果常藏有“测试全过、实际跑不起来”的隐蔽缺陷。我负责在代码生成之后加一道“自动质检 + 自动返修”工序，让有问题的代码能被自动发现、自动修好、再自动验证，形成闭环。</li>
+                <li><strong>自动质检：</strong>代码生成后自动装入隔离沙箱，跑完所有自动化测试，并把程序入口真实启动一遍、验证能跑起来；报错信息会被整理成修 bug 任务单，发回大模型自动修复，修完自动复验，直到通过或达到轮次上限。</li>
+                <li><strong>真实缺陷验证：</strong>曾抓到“105 个测试全绿、但程序入口文件是空的、根本启动不了”的 bug，自动修复后 105 项测试通过、入口正常启动；还补上了测试框架在收集阶段报错被漏判的兜底逻辑。</li>
+                <li><strong>成本账本：</strong>记录每一轮修复的大模型开销——修一个 bug 平均约 2–3 万 tokens（大模型的计费单位）、只调用 1 次大模型，单纯复验不花钱，让“修几轮最划算”有数据可依。</li>
               </ul>
             </div>
           </article>
@@ -99,115 +73,35 @@
 
       <article class="resume-page">
         <section class="resume-section page-two-section">
-          <article class="role-card role-card-bilibili">
-            <div class="role-heading">
-              <span class="logo-chip"><img src="../../../assets/logos/bilibili-color.svg" alt="哔哩哔哩 Logo" /></span>
-              <strong>哔哩哔哩（Mock 模拟经历）· 智能创作平台</strong>
-              <span>多模态算法实习生｜2025.07 - 2025.12</span>
-            </div>
-
-            <div class="project-block">
-              <h3>Creator Copilot｜图文 / 视频内容理解 Agent</h3>
-              <ul>
-                <li><strong>背景：</strong>为内容创作者提供选题分析、视频切片、封面建议与标题生成，统一处理图像、音频、字幕和评论信号。</li>
-                <li><strong>Agentic Workflow：</strong>意图识别 → 媒体解析 → Tool Registry 选择 ASR / OCR / 检索 / 视觉理解工具 → 子结论校验 → 报告汇总；工具层封装超时重试、错误分类和降级策略。</li>
-                <li><strong>多模态 RAG：</strong>对视频片段、字幕与历史爆款建立多路向量索引，使用 cross-encoder 重排并以时间戳绑定视觉证据；回答可回链到原视频片段。</li>
-                <li><strong>Context Engineering：</strong>业务分析范文和创作模板作为 Few-shot 动态注入；多轮推理中压缩旧 Observation，并保留前轮结论与证据索引滚动输入。</li>
-                <li><strong>质量闭环：</strong>离线集按事实性、标题吸引力和证据覆盖打分；线上收集采纳、改写与重试信号，形成失败样本池用于提示词和检索策略迭代。</li>
-                <li><strong>模拟效果：</strong>周均服务 300+ 创作者，单次分析从 40 分钟缩短至 6 分钟；内部盲评中建议可用率提升 21%。</li>
-              </ul>
-            </div>
-
-            <div class="project-block">
-              <h3>SmartCut 视频智能粗剪｜Timeline Planning + Segment Ranking</h3>
-              <ul>
-                <li><strong>主流水线：</strong>ASR 与镜头检测生成候选片段，VLM 提取人物、动作、情绪和场景标签；Planner 根据目标时长与内容主线输出时间线，渲染前执行重复片段与黑帧检查。</li>
-                <li><strong>排序模型：</strong>融合语义相关性、视觉质量、语音完整度和节奏特征训练轻量 ranker；使用编辑人员保留 / 删除操作构造 pairwise 偏好样本。</li>
-                <li><strong>模拟效果：</strong>3 分钟成片的人工粗剪耗时从 50 分钟降低至 12 分钟，候选片段采纳率达到 68%。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="role-card role-card-kuaishou">
-            <div class="role-heading">
-              <span class="logo-chip"><img src="../../../assets/logos/kuaishou-iconfont.svg" alt="快手 Logo" /></span>
-              <strong>快手（Mock 模拟经历）· 智能文档平台</strong>
-              <span>算法研发实习生｜2025.03 - 2025.06</span>
-            </div>
-
-            <div class="project-block">
-              <h3>DocVision 智能文档解析平台｜Layout Understanding + OCR</h3>
-              <ul>
-                <li><strong>文档理解链路：</strong>构建 PDF 渲染、版面检测、表格结构恢复、OCR 识别和阅读顺序排序流水线；统一输出带坐标与层级信息的 Document IR。</li>
-                <li><strong>训练与优化：</strong>引入难例挖掘与伪标签过滤，针对票据、研报和扫描合同进行领域微调；通过动态分辨率和 batch 推理降低显存占用。</li>
-                <li><strong>工程落地：</strong>将检测、OCR 和结构恢复拆成异步 DAG，支持页级并行、失败重试和中间产物缓存；以 request_id 串联日志、指标和可视化结果。</li>
-                <li><strong>模拟效果：</strong>表格结构 F1 提升 7.8 个百分点，A10 单页推理 P95 从 2.1s 降至 1.2s，人工复核量降低约 28%。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="role-card role-card-meituan">
-            <div class="role-heading">
-              <span class="logo-chip"><img src="../../../assets/logos/meituan-iconfont.svg" alt="美团 Logo" /></span>
-              <strong>美团（Mock 模拟经历）· 到店智能平台</strong>
-              <span>算法工程实习生｜2024.11 - 2025.02</span>
-            </div>
-
-            <div class="project-block">
-              <h3>Merchant Vision QA｜门店图像质检 + 多模态审核</h3>
-              <ul>
-                <li><strong>质检链路：</strong>联合图像质量分类、OCR 和 VLM 规则判定门店素材的模糊、水印、文字遮挡与内容不一致；低置信度样本进入人工复核队列。</li>
-                <li><strong>模拟效果：</strong>日均处理 12 万张素材，人工复核量降低 35%，高风险样本召回率提升 9 个百分点。</li>
-              </ul>
-            </div>
-          </article>
-        </section>
-
-        <section class="resume-section compact-section">
-          <h2>项目经历</h2>
+          <h2>论文与开源</h2>
 
           <article class="project-block standalone-project">
-            <h3>ScenePilot｜多模态桌面操作 Agent　<a href="https://github.com/example/scene-pilot">github.com/example/scene-pilot</a></h3>
+            <h3>MemeFuzzer ｜ ICME 2026（CCF-B）已接收 · 第三作者</h3>
             <ul>
-              <li><strong>项目简介：</strong>面向桌面应用的视觉操作 Agent，使用截图理解、UI Grounding 与动作规划完成跨应用任务，支持轨迹回放和人工接管。</li>
-              <li><strong>核心实现：</strong>将任务拆分为 observe / locate / act / verify 四阶段 ReAct 循环；视觉编码器生成候选控件，VLM 输出动作与置信度，低置信度时请求用户确认。</li>
-              <li><strong>评测体系：</strong>构造 120 个跨应用任务，记录 Success Rate、平均动作数和人工接管率；加入失败截图回放与动作级错误归因。</li>
-              <li><strong>安全策略：</strong>高风险操作进入审批队列，执行前展示目标控件、动作和参数；支持路径、域名和应用级 allowlist，并为每次动作保存可回放快照。</li>
+              <li><strong>研究内容：</strong>受软件 fuzz testing 启发，以受害者视角（mindset 模拟 + Mindset Router）校准多模态大模型对有害梗图的注意力偏差，再经 Norm Alignment Network 对齐人类判断。</li>
+              <li><strong>我的工作：</strong>参与前期调研与方法框架设计，搭建三数据集统一评测流水线（FHM / MAMI / ToxiCN-MM），跑通 10 余个 baseline 对比与三组消融实验。</li>
+              <li><strong>结果：</strong>中英三数据集全面超越强基线，中文集 F1 相对提升 +5.48。</li>
             </ul>
           </article>
 
           <article class="project-block standalone-project">
-            <h3>CanvasForge｜可控海报生成工作台</h3>
+            <h3>PoisonSwarm（FCGen）｜ ACL 2026（CCF-A）在投 · 第三作者　<a href="https://github.com/lululinran/poisonswarm_defeat">github.com/lululinran/poisonswarm_defeat</a></h3>
             <ul>
-              <li><strong>生成链路：</strong>自然语言需求 → 版式规划 JSON → 图像生成 / 素材检索 → 文字与主体约束检查 → Canvas 渲染；支持局部重绘和多尺寸批量导出。</li>
-              <li><strong>质量控制：</strong>基于 OCR 检测文字缺失，使用 CLIP 相似度和审美模型联合筛选；失败样本自动调整提示词并二次生成。</li>
-              <li><strong>模拟效果：</strong>累计生成 8,000+ 张物料，首轮可用率 73%，单张平均生成时长控制在 70 秒内。</li>
-            </ul>
-          </article>
-
-          <article class="project-block standalone-project">
-            <h3>OmniSearch｜跨模态素材检索与去重服务</h3>
-            <ul>
-              <li><strong>检索链路：</strong>统一编码图像、视频关键帧、字幕与标签，构建分片向量索引；支持以文搜图、以图搜视频和相似素材聚类。</li>
-              <li><strong>召回与重排：</strong>多路 ANN 召回后使用 cross-modal reranker 精排，结合时间、版权与清晰度规则过滤；冷热索引分层降低在线检索成本。</li>
-              <li><strong>模拟效果：</strong>百万级素材库 Top-10 Recall 提升 12 个百分点，P95 延迟控制在 180ms，重复素材入库量下降 46%。</li>
+              <li><strong>研究内容：</strong>LLM 安全红队研究：揭示众包式分布式有害信息生成，三阶段流水线（反事实映射 → 单元级毒化 → 有害重组）+ Launder Scheduler 跨模型调度，攻击成功率 SSR 达 1.00。</li>
+              <li><strong>我的工作：</strong>参与三阶段流水线实验搭建与前期调研；独立实现攻击特征检测原型（语义解析 → 贝叶斯意图建模 → 分档熔断 → 多模型共识），做会话级意图追踪。</li>
             </ul>
           </article>
         </section>
 
         <section class="resume-section compact-section">
-          <h2>开源、竞赛与专业能力</h2>
+          <h2>专业技能</h2>
           <ul class="closing-list">
-            <li><strong>开源：</strong>长期参与视觉理解与 Agent 工具链社区，提交 60+ PR；维护 2 个演示项目，熟悉 issue triage、release 与贡献者协作流程。</li>
-            <li><strong>竞赛：</strong>全国大学生人工智能创新赛一等奖、Vision Hackathon 最佳工程实现奖（均为模板模拟内容）。</li>
-            <li><strong>研究：</strong>复现 Video-R1、LLaVA-OneVision 与视觉 Agent 相关工作，关注视觉 token 压缩、长视频推理、Grounding 和多模态奖励模型。</li>
-            <li><strong>算法：</strong>熟悉 Transformer、ViT、CLIP、视觉语言模型、检测分割、OCR、RAG、SFT / DPO 与 Agentic RL 基本方法。</li>
-            <li><strong>工程：</strong>熟练使用 Python、PyTorch、Transformers、vLLM、Docker、Linux、Git；了解 TensorRT、Ray、FastAPI 与可观测性建设。</li>
-            <li><strong>语言：</strong>CET-6；能够阅读英文论文与技术文档，并撰写中英文设计文档。</li>
+            <li><strong>Agent / LLM 应用：</strong>熟悉 LLM Agent 应用开发，掌握 tool calling、MCP 协议、Prompt 与上下文工程、记忆系统、RAG 检索增强。</li>
+            <li><strong>全栈与数据库：</strong>熟悉 uni-app x、Egg.js，掌握数据库建模、RESTful API 与权限体系设计；熟悉 Git 协作与单元测试规范。</li>
+            <li><strong>编程与后端：</strong>熟悉 Python、SQL，具备 FastAPI、asyncio、MySQL、PostgreSQL、Qdrant 服务端开发经验。</li>
+            <li><strong>算法与端侧：</strong>了解计算机视觉基础，具备 OpenCV、目标跟踪、端侧 NPU 部署（RKNN）实践。</li>
           </ul>
         </section>
-
-        <p class="demo-note">本页全部姓名、联系方式、学校、公司经历、项目与指标均为模板演示数据，请替换为真实信息后再投递。</p>
       </article>
     </main>
   </body>
